@@ -18,11 +18,12 @@
 
     <body>
         <div class="container-fluid">
-            <div class="row justify-content-center" id="containerRow">
+            <div class="row justify-content-center">
                 
                 <!-- Introduction and rules container -->
-                    <div id="left-container" class="col-lg-6 p-5">
-                        <div class="intro-section">
+                <div id="left-container" class="col-lg-6 p-5">
+                    <div class="intro-section">
+                        <div class="wrapper-intro">
                             <div class="intro">
                                 <h6>Devadas & Grice Production</h6>
                                 <h2>Mystery Fruit</h2>
@@ -31,44 +32,48 @@
                                 <p>You'll be given four facts about a fruit, but a fact is revealed one at a time. If you're able to guess the fruit based on just one fact you get a total of five points. The point decreases by 1 whenever you need a second fact to guess the fruit. You only get 3 chances to guess per fact revealed, and you only get 30s to guess.</p>
                             </div>
                             <button id="startBtn" type="button" class="btn btn-dark">Start Game</button>
+    
                         </div>
                     </div>
+                </div>
                 
                 <!-- Game container -->
                 <div id="right-container" class="col-lg-6 p-5">
                     <div class="user-section">
 
                         <div class="wrapper-game">
-                            <h3>Guess the Fruit</h3>
-
-                            <div class="answer-container">
-                                <input class="userAnswer" type="text" id="answer" placeholder="Your answer here">
-                                <br/>
-                                <input type="submit" value="Submit" class="btn btn-dark" id="answerBtn"></button>
-                                <br/>
-                                <button id="revealBtn" type="button" class="btn btn-dark">Reveal Hints</button>
-                                <p id="feedback"> <!-- Insert feedback here --> </p>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="hints-container shadow-sm bg-body-tertiary rounded mb-3">
+                                        <ul id="hint-list"> <!-- Insert hint list here -->  </ul>
+                                    </div>
+                                    <p id="feedback"> <!-- Insert feedback here --> </p>
+                                </div>
                             </div>
-
-                            <div class="hints-container">
-                                
-                                <div id="hints">
-                                    <ol id="hint-list"> <!-- Insert hint list here -->  </ol>
-                                </div>    
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="answer-container">
+                                        <input class="mb-3 form-control-lg" id="answer" type="text" placeholder="Your answer here">
+                                        <div class="buttons mb-3">
+                                            <button id="answerBtn" type="submit" class="btn btn-dark">Submit</button>
+                                            <button id="revealBtn" type="button" class="btn btn-dark">Reveal Hints</button>
+                                        </div>
+                                        
+                                        <div id="nextDiv">
+                                            <button id="nextFruit" class="btn btn-dark">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div id="nextDiv">
-                                <button id="nextFruit" class="btn btn-dark">Next</button>
-                            </div>
-
                         </div>
-
                     </div>
                 </div>  
 
             </div>
         </div>
+
         <div id="endMessage"> <!-- Insert end game message here. --> </div>
+        
         <script src="script.js"></script>
         <script src="fruits.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
