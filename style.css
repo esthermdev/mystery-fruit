@@ -51,11 +51,11 @@ h2, h3, h6 {
     border: 2px solid #f17a2b; /* Green border */
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Add padding inside the container */
+    padding: 8px; /* Add padding inside the container */
     margin: 0 auto; /* Center the container horizontally */
     background-color: hsl(0, 23%, 97%); /* Light gray background */
 	max-width: 500px;
-	height: 300px;
+	height: 280px;
 	width: 100%;
 }
 
